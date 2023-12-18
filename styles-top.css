@@ -1,0 +1,52 @@
+.top-container {
+    grid-area: top-container;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    gap: 0px;
+    padding: 10px;
+    background-color: lightgreen;
+}
+.top-container > * {
+  display: flex;
+  border-style: solid;
+}
+.search-container{
+  height: 100%;
+}
+.user-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "img top-container"
+  "img center-container";
+}
+.user-card > img {
+  grid-area: img;
+  width: 75px;
+  height: 75px;
+  border-radius: 75px;
+}
+.top-container > .button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-content: start;
+  gap: 20px;
+}
+.top-container > .button-container > input{
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 10px 10px;
+}
+.user-login-card{
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+.user-login-card > img {
+  width: 50px;
+  height: 50px;
+}
