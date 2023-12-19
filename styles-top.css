@@ -1,20 +1,45 @@
+:root{
+  --gray-color:#e5e7eb;
+  --dark-gray-color:#9ca3af;
+  --navbar-color: #1c8899;
+}
+
 .top-container {
     grid-area: top-container;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
-    gap: 0px;
+    gap: 10px;
     padding: 10px;
-    background-color: lightgreen;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    box-shadow: 0 5px 5px -5px gray;
 }
 .top-container > * {
   display: flex;
-  border-style: solid;
 }
 .search-container{
+  display: flex;
   height: 100%;
+  align-items: center;
+  gap: 10px;
 }
+.search-container img{
+  height: 30px;
+  width: 30px;
+}
+.search-container input{
+  flex-grow: 1;
+  height: 1.5rem;
+  background-color: var(--gray-color);
+  border-style: none;
+  padding: .1rem;
+  padding-left: 1rem;
+  border-radius: 0.75rem;
+}
+
 .user-card {
   display: grid;
   grid-template-columns: 100px 1fr;
@@ -22,12 +47,18 @@
   grid-template-areas:
   "img top-container"
   "img center-container";
+  align-items: center;
 }
 .user-card > img {
   grid-area: img;
   width: 75px;
   height: 75px;
   border-radius: 75px;
+}
+.user-card #nickname
+{
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 .top-container > .button-container{
   display: flex;
@@ -38,15 +69,38 @@
 }
 .top-container > .button-container > input{
   flex-grow: 1;
-  padding: 10px;
-  border-radius: 10px 10px;
+  padding: 7px;
+  border-radius: 20px;
+  background-color: var(--navbar-color);
+  color: white;
+  font-weight: 700;
+  border-style: solid;
+  border-color: var(--navbar-color);
+  border-width: 3px;
+  transition-duration: .3s;
 }
+.top-container > .button-container > input:hover{
+  background-color: white;
+  color: var(--navbar-color);
+  font-weight: 700;
+  transition-duration: .3s;
+}
+
 .user-login-card{
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
-.user-login-card > img {
-  width: 50px;
-  height: 50px;
+.user-login-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
 }
+#alarm{
+  width: 30px;
+  height: 30px;
+}
+
