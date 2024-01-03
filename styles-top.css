@@ -15,7 +15,9 @@
     padding-left: 30px;
     padding-right: 30px;
     background-color: white;
-    box-shadow: 0 5px 5px -5px gray;
+    box-shadow: 0 4px 10px -5px var(--dark-gray-color);
+    overflow: visible;
+    z-index: 1;
 }
 .top-container > * {
   display: flex;
